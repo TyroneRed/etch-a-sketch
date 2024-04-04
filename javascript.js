@@ -1,5 +1,5 @@
 
-let numPerSide = 16;
+let numPerSide = prompt('How many squares per side of the grid do you want? ');
 let containerSize = 960;
 
 // create columns
