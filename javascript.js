@@ -18,7 +18,7 @@ columns.forEach((column) => {
     for(let j=0; j<numPerSide; j++){
         cell=document.createElement("div");
         cell.classList.add("cell", "grid");
-        cell.style.height = containerSize/numPerSide + "px";
+        cell.style.height = containerSize/numPerSide - 2 + "px";
         column.appendChild(cell);
     }
 });
@@ -33,6 +33,8 @@ cells.forEach((cell) => {
         g = Math.floor(Math.random() * 256);
         b = Math.floor(Math.random() * 256);
         cell.style.backgroundColor = `rgb(${r},${g},${b})`;
+        //alternatively
+        //cell.style.backgroundColor = "blue"; for solid colorizing.
     });
 });
 };
