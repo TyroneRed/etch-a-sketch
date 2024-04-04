@@ -1,9 +1,9 @@
 
 #container{
-    width: 960px;
-    height: 960px;
+    width: 800px;
+    height: 800px;
     display: flex;
-  
+} 
 .column{
     flex: 1;
 
