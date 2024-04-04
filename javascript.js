@@ -46,10 +46,11 @@ addHoverEffect();
 squaresButton = document.querySelector("Button");
 squaresButton.addEventListener("click", () => {
     numPerSide = 0;
-    while ((numPerSide < 1) || (numPerSide > 100)){
+    while ((typeof(numPerSide) !== 'number') || (numPerSide < 1) || (numPerSide > 100)){
     numPerSide = prompt("Please choose the number of cells per side (1-100):");
-}
     numPerSide = Math.round(numPerSide);
+}
+ 
     gridElements = document.querySelectorAll('.grid');
     gridElements.forEach(gridElement => {gridElement.remove()});
     createColumns();

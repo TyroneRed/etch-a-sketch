@@ -12,3 +12,16 @@
     border: 1px solid black;
 
 }
+
+button{
+    background-color: rgb(66, 133, 244);
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 10px;
+    border: 1px gray solid;
+}
+
+button:hover{
+    background-color: rgb(49, 104, 192);
+}
