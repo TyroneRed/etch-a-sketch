@@ -29,7 +29,10 @@ function addHoverEffect() {
 cells = document.querySelectorAll('.cell');
 cells.forEach((cell) => {
     cell.addEventListener("mouseover", function colorCell(){
-        cell.style.backgroundColor = "blue";
+        r = Math.floor(Math.random() * 256);
+        g = Math.floor(Math.random() * 256);
+        b = Math.floor(Math.random() * 256);
+        cell.style.backgroundColor = `rgb(${r},${g},${b})`;
     });
 });
 };
@@ -40,12 +43,15 @@ addHoverEffect();
 
 squaresButton = document.querySelector("Button");
 squaresButton.addEventListener("click", () => {
-    numPerSide = prompt('How many squares per side of the grid do you want? ');
+    numPerSide = +prompt("Please choose the number of cells per side (1-100):");
     gridElements = document.querySelectorAll('.grid');
     gridElements.forEach(gridElement => {gridElement.remove()});
     createColumns();
     createCells();
     addHoverEffect();
-})
+    }
+);   
+
+
 
 
